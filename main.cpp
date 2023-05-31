@@ -21,45 +21,6 @@ void salva_grafo(TGrafoND *grafo);
 
 /* MAIN ================================================================= */
 int main() {
-  // Vertice v[6];
-  // v[0].setNome("A");
-  // v[0].setPeso(1);
-  // v[1].setNome("D");
-  // v[1].setPeso(2);
-  // v[2].setNome("C");
-  // v[2].setPeso(10);
-  // v[3].setNome("F");
-  // v[3].setPeso(3);
-  // v[4].setNome("E");
-  // v[4].setPeso(1);
-  // v[5].setNome("B");
-  // v[5].setPeso(4);
-  
-  // TGrafoND g(6, v);
-  // g.insereA("A","D");
-  // g.insereA("A","C");
-  // g.insereA("C","E");
-  // g.insereA("C","F");
-  // g.insereA("F","B");
-  // g.insereA("C","B");
-  // g.show();
-
-  
-  // g.show();
-  // std::cout << "________________________________\n" << std::endl;
-  //   std::cout << "EXEMPLO DE INSERCAO DE VERTICE\n" << std::endl;
-
-  // g.insereV("bresser mooca", 29);
-  // g.show();
-  // std::cout << "________________________________\n" << std::endl;
-  //   std::cout << "EXEMPLO DE REMOCAO DE ARESTA\n" << std::endl;
-  // g.removeA("carrao","tatuape");
-  // g.show();
-  // std::cout << "________________________________\n" << std::endl;
-  // std::cout << "EXEMPLO DE REMOCAO DE VERTICE\n" << std::endl;
-  // g.removeV("tatuape");
-  // g.show();
-
   int option, p;
   string v1, v2;
   Vertice* v;
@@ -118,7 +79,12 @@ int main() {
       g.show();
       break;
     case 9:
-      cout << "Conexidade: " << g.conexidade() << endl;
+      if (g.conexidade() == 1) {
+        cout << "GRAFO CONEXO" << endl;
+      }
+      else {
+        cout << "GRAFO DESCONEXO" << endl;
+      }
       break;
     case 10:
       cout << "CAMINHO MÍNIMO \n";
@@ -201,23 +167,21 @@ void le_cria_g(string n_arq, TGrafoND* Grafo)
   if (arq.is_open())
   {
     /* Lê a primeira e segunda linha e as interpreta */
-    getline(arq, linha); cout << "O tipo de grafo é NÃO DIRECIONADO - TIPO 1\n"; 
+    getline(arq, linha); cout << "O tipo de grafo é NÃO DIRECIONADO - TIPO 1"; 
     getline(arq, linha); n = stoi(linha);
 
     /* Insere os vértices até chegar ao fim do arquivo */
     /* ou alcançar a quantidade descrita              */
-    cout << "----------------VERTICES----------------" << endl;
     while(n > 0 && getline(arq, linha))
     {
       stringstream ss(linha);
       getline(ss, nome_a, ','); getline(ss, peso_s);
       peso = stoi(peso_s);
-      cout << nome_a << "   " << peso_s << endl;
       Grafo->insereV(nome_a, peso); n--;
     }
     /* Adquire a quantidade de arestas */
     getline(arq, linha); m = stoi(linha);
-    cout << "----------------ARESTAS----------------" << endl;
+
     /* Insere as arestas até chegar ao fim do arquivo */
     /* ou alcançar a quantidade descrita              */
     while(m >= 0 && getline(arq, linha))
@@ -256,7 +220,7 @@ void salva_grafo(TGrafoND* grafo)
   saida << grafo->getA() << endl;
   // Roda cada vértice e verifica quais são os adjacentes a ele
   for (int i = 0; i < n; i++)
-    for (int j = i; j < n - 1; j++)
+    for (int j = i; j <= n; j++)
       if (grafo->is_adj(i, j)) saida << grafo->getVert(i).getNome() << "," << grafo->getVert(j).getNome() << endl;
   saida.close(); return;
 }

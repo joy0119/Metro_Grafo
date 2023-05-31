@@ -98,7 +98,7 @@ Perdizes,200
 PUC-Cardoso de Almeida,200
 FAAP-Pacaembu,200
 14 Bis,200
-100
+101
 Palmeiras Barra Funda,Marechal Deodoro
 Marechal Deodoro,Santa Cecilia
 Santa Cecilia,Republica
@@ -131,6 +131,7 @@ Saude,Praca da Arvore
 Praca da Arvore,Santa Cruz
 Santa Cruz,Vila Mariana
 Santa Cruz,Chacara Klabin
+Santa Cruz,Hospital
 Vila Mariana,Ana Rosa
 Hospital,AACD-Servidor
 Chacara Klabin,Ana Rosa
@@ -197,3 +198,6 @@ Agua Branca,SESC-Pompeia
 SESC-Pompeia,Perdizes
 Perdizes,PUC-Cardoso de Almeida
 PUC-Cardoso de Almeida,FAAP-Pacaembu
+FAAP-Pacaembu,Higienopolis-Mackenzie
+Higienopolis-Mackenzie,14 Bis
+14 Bis,Bela Vista

@@ -108,6 +108,7 @@ Republica,Luz
 Anhangabau,Se
 Higienopolis-Mackenzie,Paulista-Consolacao
 Higienopolis-Mackenzie,FAAP-Pacaembu
+Higienopolis-Mackenzie,14 Bis
 Luz,Sao Bento
 Luz,Tiradentes
 Se,Pedro II
@@ -129,8 +130,8 @@ Conceicao,Sao Judas
 Sao Judas,Saude
 Saude,Praca da Arvore
 Praca da Arvore,Santa Cruz
-Santa Cruz,Santa Cruz
 Santa Cruz,Vila Mariana
+Santa Cruz,Hospital
 Santa Cruz,Chacara Klabin
 Vila Mariana,Ana Rosa
 Hospital,AACD-Servidor
@@ -142,6 +143,7 @@ Paraiso,Brigadeiro
 Vergueiro,Sao Joaquim
 Sao Joaquim,Bela Vista
 Sao Joaquim,Liberdade
+Bela Vista,14 Bis
 Tiradentes,Armenia
 Armenia,Port Tiete
 Port Tiete,Carandiru

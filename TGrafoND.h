@@ -40,8 +40,7 @@ private:
                                   na matriz de adj e no vetor de vértices*/
   void printCaminho(int *distancia,
                     int *predecessor, // Imprime o caminho encontrado pelo
-                                      // algoritmo de Bellman
-                    int destino);
+                    int destino);      // algoritmo de Bellman
   void relaxa(int *d, int *pi, int v,
               int u); // Faz a troca de melhor caminho no algoritmo de Bellman
 

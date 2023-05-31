@@ -4,6 +4,7 @@
 // Ryan Marco Andrade dos Santos - 42080223
 #include "TGrafoND.h"
 #include "pilha.h"
+#include <iomanip>
 #include <iostream>
 #include <limits>
 #include <locale.h>
@@ -41,15 +42,6 @@ TGrafoND::~TGrafoND() {
 
 // MÉTODOS PRIVADOS =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-int TGrafoND::degree(int v) {
-  int grau = 0;
-  for (int w = 0; w < n; w++)
-    if (adj[w][v] != 0 && adj[v][w] != 0)
-      grau++;
-
-  return grau;
-}
-
 void TGrafoND::visitarNo(int *qntd_visitas) { (*qntd_visitas)++; }
 
 int *TGrafoND::marcarNo(int nosMarcados[], int nroNosMarcados, int no) {
@@ -82,17 +74,34 @@ int TGrafoND::find_index_V(string nome) {
 
 void TGrafoND::printCaminho(int *distancia, int *predecessor, int destino) {
   if (distancia[destino] == 0) {
-    cout << "Percurso: " << vetr[destino].getNome() << " ";
+    cout << "\n+- - - - - - -! CAMINHO RECOMENDADO !- - - - - - -+" << endl;
+    // linha 1
+    cout << "|";
+    cout << setw(24) << left << "Estações";
+    cout << "  |";
+    cout << setw(24) << left << "Nº de Pessoas (milhares)|" << endl;
+    cout << "+- - - - - - - - - - - - - - - - - - - - - - - - -+" << endl;
+    // linha 2
+    cout << "|";
+    cout << setfill('.') << setw(24) << left << vetr[destino].getNome();
+    cout << "|";
+    cout << setw(24) << left << vetr[destino].getPeso();
+    cout << "|" << endl;
     return;
   }
   printCaminho(distancia, predecessor, predecessor[destino]);
-  cout << vetr[destino].getNome() << " ";
+  cout << "|";
+  cout << setfill('.') << setw(24) << left << vetr[destino].getNome();
+  cout << "|";
+  cout << setw(24) << left << vetr[destino].getPeso();
+  cout << "|" << endl;
 }
 
 void TGrafoND::relaxa(int *d, int *pi, int v, int u) {
   if (d[v] > d[u] + (vetr[u].getPeso() + vetr[v].getPeso())) {
     d[v] = d[u] + (vetr[u].getPeso() + vetr[v].getPeso());
-    pi[v] = u;
+    if (pi[v] == -2 || pi[v] != u)
+      pi[v] = u;
   }
 }
 
@@ -102,20 +111,18 @@ void TGrafoND::insereA(string a, string b) {
   // int rel = 0;
   int iA;
   int iB;
-  for(int i = 0; i< n; i++) {
-    if(a == vetr[i].getNome()) {
-      // rel++;
+  for (int i = 0; i < n; i++) {
+    if (a == vetr[i].getNome()) {
       iA = i;
     }
   }
-  for(int j = 0; j< n; j++) {
-    if(b == vetr[j].getNome()) {
-      // rel++;
+  for (int j = 0; j < n; j++) {
+    if (b == vetr[j].getNome()) {
       iB = j;
     }
   }
   // testa se nao temos a aresta
-  if(adj[iA][iB] == 0 && adj[iB][iA] == 0) {
+  if (adj[iA][iB] == 0 && adj[iB][iA] == 0) {
     adj[iA][iB] = 1;
     adj[iB][iA] = 1;
     m++; // atualiza qtd arestas
@@ -271,6 +278,15 @@ void TGrafoND::show() {
   std::cout << "\nfim da impressao do grafo." << std::endl;
 }
 
+int TGrafoND::degree(int v) {
+  int grau = 0;
+  for (int w = 0; w < n; w++)
+    if (adj[w][v] != 0 && adj[v][w] != 0)
+      grau++;
+
+  return grau;
+}
+
 int TGrafoND::grauV(int g[]) {
   for (int i = 0; i < n; i++) {
     g[i] = degree(i);
@@ -279,7 +295,7 @@ int TGrafoND::grauV(int g[]) {
 }
 
 int TGrafoND::percursoProfundidade(int vInicio) {
-  int nroNosMarcados = 0, no, m, nroNosVisitados = 0;
+  int nroNosMarcados = 0, no, nroNosVisitados = 0;
   int *nosMarcados = new int[n];
   Pilha *p = new Pilha();
   nosMarcados = marcarNo(nosMarcados, nroNosMarcados, vInicio);
@@ -300,10 +316,19 @@ int TGrafoND::percursoProfundidade(int vInicio) {
 }
 
 int TGrafoND::conexidade() {
-  if (percursoProfundidade(0) == n)
-    return 1;
-  else
-    return 0;
+  int* graus = new int[n];
+  grauV(graus);
+  for (int i = 0; i < n; i++) {
+    if (graus[i] == 0) {
+      return 0;
+    }
+  }
+  return 1;
+}
+
+void mostraVetor(int *v, int tam) {
+  for (int i = 0; i < tam; i++)
+    cout << v[i] << " | ";
 }
 
 void TGrafoND::caminhoMinimo(string origem, string destino) {
@@ -312,20 +337,25 @@ void TGrafoND::caminhoMinimo(string origem, string destino) {
   int *pi = new int[n]; // indica vértice predecessor de v no menor caminho
                         // encontrado - só vai ter indices dentro
 
+  int origem_index = find_index_V(origem),
+      destino_index = find_index_V(destino);
+  if (origem_index == -1 || destino_index == -1) {
+    cout << "Uma das estações não foi encontrada !!" << endl;
+    return;
+  }
+
   for (int v = 0; v < n; v++) {
     pi[v] = -2;
-    d[v] = std::numeric_limits<int>::max();
+    d[v] = 99999;
   }
-  d[find_index_V(origem)] = 0;
+  d[origem_index] = 0;
 
   for (int count = 1; count < n - 1; count++) // Para cada Vértice em G
     /* Para cada aresta em G */
     for (int u = 0; u < n; u++)
-      for (int v = 0; v < n; v++) {
-        if (adj[u][v] != 1)
-          continue;
-        relaxa(d, pi, v, u);
-      }
+      for (int v = 0; v < n; v++)
+        if (adj[u][v] == 1)
+          relaxa(d, pi, v, u);
   /* Para cada aresta em G */
   for (int u = 0; u < n; u++)
     for (int v = 0; v < n; v++) {
@@ -336,5 +366,6 @@ void TGrafoND::caminhoMinimo(string origem, string destino) {
         return;
       }
     }
-  printCaminho(d, pi, find_index_V(destino));
+  printCaminho(d, pi, destino_index);
+  cout << "+- - - - - - - = = = = =(*)= = = = = - - - - - - -+" << endl;
 }
