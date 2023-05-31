@@ -8,7 +8,7 @@ O projeto conta com o tema de mapeamento da média do número de pessoas (em mil
 - Amarela;
 - Laranja.
 
-OBS: A linha laranja do metrô ainda está em construção, por este motivo os valores foram considerados como -1. A inserção da linha Laranja foi adicionada para futuras implementações, como encontrar o menor caminho entre um destino e outro, por exemplo.
+OBS: A linha laranja do metrô ainda está em construção, por este motivo os valores foram considerados como 200. A inserção da linha Laranja foi adicionada para futuras implementações, como encontrar o menor caminho entre um destino e outro, por exemplo.
 Com este tema, o grupo realizou a construção de um Grafo Não-Direcionado Ponderado nos Vértices. 
 
 Abaixo está a imagem do grafo construído na ferramenta GraphOnline e o link:
