@@ -1,0 +1,200 @@
+1
+98
+Palmeiras Barra Funda,132
+Marechal Deodoro,24
+Santa Cecilia,21
+Republica,105
+Anhangabau,44
+Higienopolis-Mackenzie,21
+Luz,112
+Se,258
+Pedro II,15
+Bras,76
+Bresser Mooca,29
+Belem,33
+Tatuape,69
+Carrao,42
+Penha,25
+Vila Matilde,23
+Guilhermina Esperanca,18
+Patriarca,19
+Arthur Alvin,51
+Corinthians Itaquera,71
+Jabaquara,64
+Conceicao,22
+Sao Judas,13
+Saude,24
+Praca da Arvore,14
+Santa Cruz,85
+Vila Mariana,17
+Hospital,9
+Chacara Klabin,64
+Ana Rosa,60
+Paraiso,69
+Vergueiro,23
+Sao Joaquim,23
+Bela Vista,200
+Liberdade,19
+Sao Bento,47
+Tiradentes,14
+Armenia,19
+Port Tiete,42
+Carandiru,10
+Santana,45
+Jardim SP AS,10
+Parada Inglesa,10
+Tucuruvi,51
+Capao Redondo,84
+Campo Limpo,35
+Vila das Belezas,12
+Giovanni Gronchi,21
+Santo Amaro,72
+Largo Treze,28
+Adolfo Pinheiro,10
+Alto da Boa Vista,5
+Borba Gato,9
+Brooklin,13
+Campo Belo,10
+Eucaliptos,15
+Moema,17
+AACD-Servidor,10
+Vila Prudente,57
+Tamanduatei,62
+Sacoma,35
+Alto do Ipiranga,16
+Santos Imigrantes,12
+Brigadeiro,41
+Trianon-Masp,37
+Paulista-Consolacao,82
+Clinicas,18
+Santuario Sumare,8
+Vila Madalena,17
+Oscar Freire,21
+Oratorio,5
+Sao Lucas,5
+Camilo Haddad,3
+Vila Tolstoi,4
+Vila Uniao,5
+Jardim Planalto,4
+Sapopemba,7
+Fazenda da Juta,4
+Sao Mateus,16
+Jardim Colonial,4
+Vila Sonia,34
+Sao Paulo-Morumbi,22
+Butanta,35
+Pinheiros,89
+Faria Lima,30
+Fradique Coutinho,15
+Brasilandia,200
+Vila Cardoso,200
+Itaberaba,200
+Joao Paulo I,200
+Freguesia do O,200
+Santa Marina,200
+Agua Branca,200
+SESC-Pompeia,200
+Perdizes,200
+PUC-Cardoso de Almeida,200
+FAAP-Pacaembu,200
+14 Bis,200
+101
+Palmeiras Barra Funda,Marechal Deodoro
+Marechal Deodoro,Santa Cecilia
+Santa Cecilia,Republica
+Republica,Anhangabau
+Republica,Higienopolis-Mackenzie
+Republica,Luz
+Anhangabau,Se
+Higienopolis-Mackenzie,Paulista-Consolacao
+Higienopolis-Mackenzie,FAAP-Pacaembu
+Luz,Sao Bento
+Luz,Tiradentes
+Se,Pedro II
+Se,Liberdade
+Se,Sao Bento
+Pedro II,Bras
+Bras,Bresser Mooca
+Bresser Mooca,Belem
+Belem,Tatuape
+Tatuape,Carrao
+Carrao,Penha
+Penha,Vila Matilde
+Vila Matilde,Guilhermina Esperanca
+Guilhermina Esperanca,Patriarca
+Patriarca,Arthur Alvin
+Arthur Alvin,Corinthians Itaquera
+Jabaquara,Conceicao
+Conceicao,Sao Judas
+Sao Judas,Saude
+Saude,Praca da Arvore
+Praca da Arvore,Santa Cruz
+Santa Cruz,Santa Cruz
+Santa Cruz,Vila Mariana
+Santa Cruz,Chacara Klabin
+Vila Mariana,Ana Rosa
+Hospital,AACD-Servidor
+Chacara Klabin,Ana Rosa
+Chacara Klabin,Santos Imigrantes
+Ana Rosa,Paraiso
+Paraiso,Vergueiro
+Paraiso,Brigadeiro
+Vergueiro,Sao Joaquim
+Sao Joaquim,Bela Vista
+Sao Joaquim,Liberdade
+Tiradentes,Armenia
+Armenia,Port Tiete
+Port Tiete,Carandiru
+Carandiru,Santana
+Santana,Jardim SP AS
+Jardim SP AS,Parada Inglesa
+Parada Inglesa,Tucuruvi
+Capao Redondo,Campo Limpo
+Campo Limpo,Vila das Belezas
+Vila das Belezas,Giovanni Gronchi
+Giovanni Gronchi,Santo Amaro
+Santo Amaro,Largo Treze
+Largo Treze,Adolfo Pinheiro
+Adolfo Pinheiro,Alto da Boa Vista
+Alto da Boa Vista,Borba Gato
+Borba Gato,Brooklin
+Brooklin,Campo Belo
+Campo Belo,Eucaliptos
+Eucaliptos,Moema
+Moema,AACD-Servidor
+Vila Prudente,Tamanduatei
+Vila Prudente,Oratorio
+Tamanduatei,Sacoma
+Sacoma,Alto do Ipiranga
+Alto do Ipiranga,Santos Imigrantes
+Brigadeiro,Trianon-Masp
+Trianon-Masp,Paulista-Consolacao
+Paulista-Consolacao,Clinicas
+Paulista-Consolacao,Oscar Freire
+Clinicas,Santuario Sumare
+Santuario Sumare,Vila Madalena
+Oscar Freire,Fradique Coutinho
+Oratorio,Sao Lucas
+Sao Lucas,Camilo Haddad
+Camilo Haddad,Vila Tolstoi
+Vila Tolstoi,Vila Uniao
+Vila Uniao,Jardim Planalto
+Jardim Planalto,Sapopemba
+Sapopemba,Fazenda da Juta
+Fazenda da Juta,Sao Mateus
+Sao Mateus,Jardim Colonial
+Vila Sonia,Sao Paulo-Morumbi
+Sao Paulo-Morumbi,Butanta
+Butanta,Pinheiros
+Pinheiros,Faria Lima
+Faria Lima,Fradique Coutinho
+Brasilandia,Vila Cardoso
+Vila Cardoso,Itaberaba
+Itaberaba,Joao Paulo I
+Joao Paulo I,Freguesia do O
+Freguesia do O,Santa Marina
+Santa Marina,Agua Branca
+Agua Branca,SESC-Pompeia
+SESC-Pompeia,Perdizes
+Perdizes,PUC-Cardoso de Almeida
+PUC-Cardoso de Almeida,FAAP-Pacaembu
